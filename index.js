@@ -19,7 +19,7 @@ const log = message => {
 
 require("./util/eventLoader")(client);
 
-client.login(ayarlar.token);
+
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -111,4 +111,5 @@ client.on("error", e => {
   console.log(chalk.bgRed(e.replace(regToken, "that was redacted")));
 });
 
-client.login(process.env.TOKEN);
+client.login(ayarlar.token);
+
